@@ -1,0 +1,13 @@
+package com.haiyu.manager.controller.api;
+
+import org.springframework.stereotype.Controller;
+
+/**
+ * 类描述：
+ *
+ * @author qying
+ * @since 2019/12/27 17:49
+ */
+@Controller
+public class BasePraiseController {
+}
