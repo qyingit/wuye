@@ -1,7 +1,7 @@
 package com.haiyu;
 
-import com.haiyu.manager.ManagerApplication;
-import com.haiyu.manager.dao.BaseAdminUserMapper;
+import com.manager.ManagerApplication;
+import com.manager.dao.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ManagerApplicationTests {
 
 	@Autowired
-	private BaseAdminUserMapper baseAdminUserMapper;
+	private UserMapper userMapper;
 
 	@Test
 	public void contextLoads() {
