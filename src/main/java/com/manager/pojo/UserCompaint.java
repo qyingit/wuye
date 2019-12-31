@@ -8,12 +8,11 @@ import javax.persistence.*;
  * 类描述：
  *
  * @author qying
- * @since 2019/12/27 15:04
+ * @since 2019/12/30 16:25
  */
 @Data
-@Table(name = "user_house")
-public class UserHouse {
-
+@Table(name = "user_compaint")
+public class UserCompaint {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -27,7 +26,7 @@ public class UserHouse {
     /**
      * 房屋名称
      */
-    @Column(name = "house_name")
-    private String houseName;
+    @Column(name = "compaint_desc")
+    private String compaintDesc;
 
 }

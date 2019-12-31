@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.manager.dao.ReportMapper">
+
+  <resultMap id="BaseResultMap" type="com.manager.pojo.UserReport">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="report_desc" jdbcType="VARCHAR" property="reportDesc" />
+  </resultMap>
+
+  <sql id="baseColumn">
+    id,user_id,report_desc
+  </sql>
+
+
+</mapper>
