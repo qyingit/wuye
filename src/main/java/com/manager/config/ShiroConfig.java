@@ -68,6 +68,7 @@ public class ShiroConfig {
         Map<String, String> filterMap = new LinkedHashMap<>();
         // 放行登录页面
         filterMap.put("/login", "anon");
+
         // 配置退出过滤器,具体的退出代码Shiro已经实现
         filterMap.put("/logout", "logout");
         //配置记住我或认证通过可以访问的地址
@@ -88,7 +89,7 @@ public class ShiroConfig {
         filterMap.put("/layout", "anon");
         filterMap.put("/home", "anon");
         filterMap.put("/user/login", "anon");
-
+        filterMap.put("/verify_wx_token", "anon");
         // <!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问【放行】-->
         filterMap.put("/**", "kickout,authc");
         filterMap.put("/*/*", "authc");

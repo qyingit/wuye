@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotNull;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
@@ -46,6 +47,13 @@ public class WeixinManagerServiceUtil {
 //        }
         return weixinUserInfoVO;
     }
+
+    /*public static void main(String[] args) {
+        String appId = "wx061e7a7909a718a1";
+        String secret = "9670dbc5358f31ac2afaf3c2d741a7fe";
+        String globalAccessToken = getGlobalAccessToken(appId, secret);
+        System.out.println(globalAccessToken);
+    }*/
 
     public static String getGlobalAccessToken(@NotNull String appId, @NotNull String secret) {
         String globalAccessToken = maps.get(CACHE_WCT_GLOBAL_ACCESS_TOKEN + appId);
@@ -137,5 +145,39 @@ public class WeixinManagerServiceUtil {
         }
         log.error("获取微信WeixinJSSDKConfig失败errcode:{}:", jsapiTicketVO.getErrcode());
         return null;
+    }
+
+    public static void main(String[] args) {
+        String ACCESS_TOKEN = "28_Vis_6tjqkUHiE6LUxyBIsDM2oCiKvwApKIEvbzGfpprmuV00LQEZRYazMvNzHpt22Q4VNS8_kd56I8KUKDkq1ntw-ndcUONXeO44Kb4LBtkJRL7Y7tJFrncVG81qFnrtb2RLD7jM8KnX1QmALATcADARGZ";
+        //String createMeanueUrl = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=";
+        String deleteMeanue = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=";
+        HttpClientUtil.doGet(deleteMeanue+ACCESS_TOKEN);
+        String url = "https://api.weixin.qq.com/cgi-bin/menu/addconditional?access_token=";
+        String s = HttpClientUtil.doPostJson(url+ACCESS_TOKEN, "{\n" +
+                "    \"button\": [\n" +
+                "        {\n" +
+                "            \"type\": \"click\", \n" +
+                "            \"name\": \"今日歌曲\", \n" +
+                "            \"key\": \"V1001_TODAY_MUSIC\"\n" +
+                "        }, \n" +
+                "        {\n" +
+                "            \"name\": \"菜单\", \n" +
+                "            \"sub_button\": [\n" +
+                "                {\n" +
+                "                    \"type\": \"view\", \n" +
+                "                    \"name\": \"搜索\", \n" +
+                "                    \"url\": \"http://www.soso.com/\"\n" +
+                "                }, \n"+
+                "    \"matchrule\": {\n" +
+                "        \"tag_id\": \"2\", \n" +
+                "        \"sex\": \"1\", \n" +
+                "        \"country\": \"中国\", \n" +
+                "        \"province\": \"广东\", \n" +
+                "        \"city\": \"广州\", \n" +
+                "        \"client_platform_type\": \"2\", \n" +
+                "        \"language\": \"zh_CN\"\n" +
+                "    }\n" +
+                "}");
+        System.out.println(s);
     }
 }

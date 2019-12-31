@@ -1,5 +1,6 @@
 package com.manager.controller.api;
 
+import com.manager.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Controller;
  * @since 2019/12/27 17:50
  */
 @Controller
-public class ReportController {
+public class ApiReportController {
 
     @Autowired
     private ReportService reportService;

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/api/prise")
 @Slf4j
-public class PraiseController {
+public class ApiPraiseController {
 
     @Autowired
     private PraiseService praiseService;

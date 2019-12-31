@@ -1,5 +1,6 @@
 package com.manager.service.impl;
 
+import com.manager.dao.PraiseMapper;
 import com.manager.service.PraiseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

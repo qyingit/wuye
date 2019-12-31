@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 2019/12/27 17:51
  */
 @Controller
-@RequestMapping("/api/complaint")
-@Slf4j
-public class ComplaintController {
+public class ApiComplaintController {
 
     @Autowired
     private ComplaintService complaintService;

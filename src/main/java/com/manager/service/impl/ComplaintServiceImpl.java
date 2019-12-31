@@ -1,5 +1,6 @@
 package com.manager.service.impl;
 
+import com.manager.dao.ComplaintMapper;
 import com.manager.service.ComplaintService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
