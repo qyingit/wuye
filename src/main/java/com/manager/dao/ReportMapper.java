@@ -1,5 +1,6 @@
 package com.manager.dao;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -11,4 +12,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ReportMapper {
+    void save(@Param("userId") Long userId,@Param("report") String report);
 }

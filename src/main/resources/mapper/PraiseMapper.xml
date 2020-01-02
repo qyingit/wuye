@@ -12,6 +12,8 @@
      id,user_id,praise_desc
   </sql>
 
-
+  <insert id="save">
+    insert  into user_praise(user_id, praise_desc) value (#{userId}, #{praise})
+  </insert>
 
 </mapper>

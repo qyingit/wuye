@@ -12,5 +12,7 @@
     id,user_id,report_desc
   </sql>
 
-
+  <insert id="save">
+    insert  into user_report(user_id, report_desc) value (#{userId}, #{report})
+  </insert>
 </mapper>

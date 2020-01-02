@@ -16,4 +16,9 @@ public class PraiseServiceImpl implements PraiseService {
 
     @Autowired
     private PraiseMapper praiseMapper;
+
+    @Override
+    public void savePraise(Long userId, String praise) {
+        praiseMapper.save(userId, praise);
+    }
 }

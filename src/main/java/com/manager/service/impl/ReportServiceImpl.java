@@ -16,4 +16,9 @@ public class ReportServiceImpl implements ReportService {
 
     @Autowired
     private ReportMapper reportMapper;
+
+    @Override
+    public void saveReport(Long userId, String report) {
+        reportMapper.save(userId, report);
+    }
 }

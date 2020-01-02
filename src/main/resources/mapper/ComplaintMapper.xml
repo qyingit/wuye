@@ -12,4 +12,8 @@
      id,user_id,compaint_desc
   </sql>
 
+  <insert id="save">
+    insert  into user_compaint(user_id, compaint_desc) value (#{userId}, #{compaint})
+  </insert>
+
 </mapper>

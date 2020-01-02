@@ -2,6 +2,7 @@ package com.manager.service.impl;
 
 import com.manager.dao.ComplaintMapper;
 import com.manager.service.ComplaintService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,4 +17,9 @@ public class ComplaintServiceImpl implements ComplaintService {
 
     @Autowired
     private ComplaintMapper complaintMapper;
+
+    @Override
+    public void saveComplaint(Long userId, String complaint) {
+        complaintMapper.save(userId,complaint);
+    }
 }
