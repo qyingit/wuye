@@ -27,8 +27,8 @@ import java.util.Objects;
 public class LoginController {
 
     private static final String TAG = "微信LoginController";
-    private static final String  appId = "appId";
-    private static final String  sec = "sec";
+    private static final String  appId = "wxcbf07066fc2446a9";
+    private static final String  sec = "c1f5d774211087e4f80b5f44dce1d13f";
 
     @Autowired
     private UserService userService;

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author qying
  * @since 2019/12/27 17:51
  */
+@RequestMapping("/api/complaint")
 @Controller
 public class ApiComplaintController {
 
